@@ -11,37 +11,40 @@
     </div>
 </div>
 
-<div class="row-fluid">
-    <div class="span12">
-		<form method="post" action="javascript:goPage(1005)">
-			<table border="1">
-				<tr>
-					<td>Cod. Mat.</td>
-					<td>Materia</td>			
-					<td>Condición</td>			
-					<td>Modalidad</td>			
-					<td>Curso y Turno</td>			
-					<td>Selección</td>
-				</tr>
-		
-				<tr>
-					<td>102</td>
-					<td>Algebra</td>
-					<td> <select id="slot1"><option>Recurso</option><option>Coherte</option></Select> </td>
-					<td> <select id="slot2"><option>Presencial</option><option>No Presencial</option></Select> </td>
-					<td> <select id="slot3"><option>1ºA Mañana</option><option>1ºA Tarde</option><option>1ºA Noche</option><option>1ºB Mañana</option><option>1ºA Noche</option></Select> </td>
-					<td> <input type="button" value="Descartar" onclick="javascript:desabilitarFila()"> </td>
-				</tr>
+<div id="w" class="container center">
+	<div class="row-fluid">
+		<div class="span12">
+			<h2>Materias a las cuales puede inscribirse</h2>
+			<hr>
+			<table class="table zebra-striped table-hover table-bordered table-condensed">
+				<thead>
+					<tr>
+						<th>Cod. Mat.</th>
+						<th>Materia</th>
+						<th>Condición</th>			
+						<th>Modalidad</th>			
+						<th>Curso y Turno</th>			
+						<th>Selección</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr class="success">
+						<td>102</td>
+						<td>Algebra</td>
+						<td> <select id="slot1"><option>Recurso</option><option>Coherte</option></Select> </td>
+						<td> <select id="slot2"><option>Presencial</option><option>No Presencial</option></Select> </td>
+						<td> <select id="slot3"><option>1ºA Mañana</option><option>1ºA Tarde</option><option>1ºA Noche</option><option>1ºB Mañana</option><option>1ºA Noche</option></Select> </td>
+						<td> <button class="btn" onclick="javascript:desabilitarFila()">Descartar</button></td>
+					</tr>
+				</tbody>
 			</table>
 			<br/>
 					
-			<table>
-				<tr>
-					<td><input type="submit" value="Inscribirse" id="insc" onclick="javascript:confirmarCambios()"></td>
-					<td><form method="post" action="javascript:goPage(1001)"><input type="submit" value="Cancelar"></form></td>
-				<tr>
-			</table>
-		</form>
-    </div>
+			<div align="right">
+				<a href="#mainMenu" data-toggle="modal" class="btn">Cancelar</a>
+				<a href="#confirmarCambios" data-toggle="modal" class="btn btn-primary">Inscribirse</a>
+			</div>
+		</div>
+	</div>
 </div>
-            
